@@ -17,9 +17,9 @@ def rename_column():
 
     for table in tables:
         table_name = table[0]
-        cursor.execute(f"SHOW COLUMNS FROM {table_name} LIKE 'faecal_colifoms'")
+        cursor.execute(f"SHOW COLUMNS FROM {table_name} LIKE 'something'")
         if cursor.fetchone():
-            cursor.execute(f"ALTER TABLE {table_name} CHANGE faecal_colifoms faecal_coliforms decimal(6,2)")
+            cursor.execute(f"ALTER TABLE {table_name} CHANGE something Somethings decimal(6,2)")
             print(f"Column in table {table_name} renamed successfully.")
 
 
